@@ -1,11 +1,11 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Primary Meta Tags -->
-<title>Cadastrar Pacientes</title>
+<title>Cadastrar Novo Pacientes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="title" content="Volt Free Bootstrap Dashboard - Settings">
 <meta name="author" content="Themesberg">
@@ -32,6 +32,8 @@
 
 <!-- Volt CSS -->
 <link type="text/css" href="../css/volt.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 
 <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
 
@@ -281,7 +283,7 @@
                               </div>
                               <div class="col-md-6 mb-3">
                                   <div>
-                                      <label for="first_name">Idade:"Sem documento (idade aparente)"</label>
+                                      <label for="first_name">Idade: "Sem documento (idade aparente)"</label>
                                       <input class="form-control" id="first_name" type="number" placeholder="" required>
                                   </div>
                               </div>
@@ -289,14 +291,15 @@
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <div>
-                                        <label for="first_name">RG:</label>
+                                        <label for="first_name">Carteira de Identidade - RG:</label>
                                         <input class="form-control" id="first_name" type="text" placeholder="" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <div>
                                         <label for="first_name">CPF:</label>
-                                        <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                        <input class="form-control" id="first_name" type="text" onkeypress="$(this).mask('000.000.000-00')">
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -361,10 +364,17 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-3">
+                                  <div>
+                                      <label for="first_name">CEP:
+                                      </label>
+                                      <input class="form-control" id="first_name" type="text" onkeypress="$(this).mask('00.000-000')">
+                                  </div>
+                              </div>
+                                <div class="col-md-4 mb-3">
                                     <div>
-                                        <label for="first_name">Fone:
+                                        <label for="first_name">Telefone:
                                         </label>
-                                        <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                        <input class="form-control" id="first_name" type="text" onkeypress="$(this).mask('(00) 0000-00009')">
                                     </div>
                                 </div>
                             </div>
@@ -381,14 +391,14 @@
                             <div class="row">
                                 <div class="col-sm-6 mb-3">
                                     <div class="form-group">
-                                        <label for="city">RG:</label>
+                                        <label for="city">Carteira de Identidade - RG:</label>
                                         <input class="form-control" id="city" type="text" placeholder="" required>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="zip">CPF:</label>
-                                        <input class="form-control" id="zip" type="tel" placeholder="" required>
+                                        <input class="form-control" id="first_name" type="text" onkeypress="$(this).mask('000.000.000-00')">
                                     </div>
                                 </div>
                             </div>
@@ -433,15 +443,22 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-3">
+                                  <div>
+                                      <label for="first_name">CEP:
+                                      </label>
+                                      <input class="form-control" id="first_name" type="text" onkeypress="$(this).mask('00.000-000')">
+                                  </div>
+                              </div>
+                                <div class="col-md-4 mb-3">
                                     <div>
-                                        <label for="first_name">Fone:
+                                        <label for="first_name">Telefone:
                                         </label>
-                                        <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                        <input class="form-control" id="first_name" type="text" onkeypress="$(this).mask('(00) 0000-00009')">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                              <div class="col-md-6 mb-3">
+                             <div class="col-md-6 mb-3">
                                   <div>
                                       <label for="first_name">Grau de parentesco com o idoso:</label>
                                       <select class="form-select mb-0" id="gender" aria-label="Gender select example">
@@ -530,6 +547,218 @@
                                     </div>
                                 </div>
                               </div>
+                              <div class="row">
+                                <div class="col-md-6 mb-3">
+                                     <div>
+                                         <label for="first_name">Possui Referências Familiares:</label>
+                                         <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                             <option selected></option>
+                                             <option value="1">Não</option>
+                                             <option value="2">Sim, especificar</option>
+                                          </select>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-6 mb-3">
+                                     <div>
+                                         <label for="first_name">Especificar:
+                                         </label>
+                                         <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                     </div>
+                                 </div>
+                               </div>
+                              <div class="col-md-6 mb-3">
+                                <div>
+                                    <label for="first_name">Morava com quem anteriormente:</label>
+                                    <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                        <option selected></option>
+                                        <option value="1">Morava sozinho (a)</option>
+                                        <option value="2">Com cônjuge</option>
+                                          <option value="3">Com filho (a)</option>
+                                            <option value="4">Sobrinho (a)</option>
+                                              <option value="2">Neto (a)</option>
+                                                <option value="5">Com parentes</option>
+                                                  <option value="6">Não parentes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6 mb-3">
+                                   <div>
+                                       <label for="first_name">Fonte de Renda:</label>
+                                       <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                           <option selected></option>
+                                           <option value="1">Sem renda própria</option>
+                                           <option value="2">Aposentadoria</option>
+                                           <option value="3">Assalariado (a)</option>
+                                           <option value="4">Pensionista</option>
+                                           <option value="5">Benefício de Prestação Continuada</option>
+                                           <option value="6">Outro</option>
+                                        </select>
+                                   </div>
+                               </div>
+                               <div class="col-md-6 mb-3">
+                                   <div>
+                                       <label for="first_name">Outro, especificar:</label>
+                                       <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                   </div>
+                               </div>
+                             </div>
+                             <div class="row">
+                              <div class="col-md-6 mb-3">
+                                   <div>
+                                       <label for="first_name">última renda mensal em saláros mínimos (sm):</label>
+                                       <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                           <option selected></option>
+                                           <option value="1">Até 1 sm</option>
+                                           <option value="2">>1 até 2 sm</option>
+                                           <option value="3">De 3 a 5 sm</option>
+                                           <option value="4">De 6 a 10 sm</option>
+                                           <option value="5">Acima de 10 sm</option>
+                                        </select>
+                                   </div>
+                               </div>
+                               <div class="row">
+                                <div class="col-md-6 mb-3">
+                                     <div>
+                                         <label for="first_name">O idoso possui bens ?:</label>
+                                         <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                             <option selected></option>
+                                             <option value="1">Não</option>
+                                             <option value="2">Sim, espeificar</option>
+                                          </select>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-6 mb-3">
+                                  <div>
+                                      <label for="first_name">Especificar:</label>
+                                      <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6 mb-3">
+                                     <div>
+                                         <label for="first_name">Possui empréstimo consignado no seu Benefício?:</label>
+                                         <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                             <option selected></option>
+                                             <option value="1">Não</option>
+                                             <option value="2">Sim</option>
+                                          </select>
+                                     </div>
+                                 </div>
+                                 
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6 mb-3">
+                                   <div>
+                                       <label for="first_name">É o próprio idoso que recebe seu benefício previdenciário?:</label>
+                                       <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                           <option selected></option>
+                                           <option value="1">Sim</option>
+                                           <option value="2">Não, especificar quem recebe</option>
+                                        </select>
+                                   </div>
+                               </div>
+                               <div class="col-md-6 mb-3">
+                                <div>
+                                    <label for="first_name">Especificar quem recebe:</label>
+                                    <input class="form-control" id="first_name" type="text" placeholder="" required>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6 mb-3">
+                                   <div>
+                                       <label for="first_name">Essa pessoa especificada possui procuração outorgada pelo idoso para gerir seus interesses?</label>
+                                       <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                           <option selected></option>
+                                           <option value="1">Sim</option>
+                                           <option value="2">Não</option>
+                                        </select>
+                                   </div>
+                               </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 mb-3">
+                                 <div>
+                                    <label for="first_name">O idoso é interditado judicialmente?</label>
+                                    <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                         <option selected></option>
+                                         <option value="1">Não</option>
+                                         <option value="2">Sim (anexar cópia)</option>
+                                  </select>
+                            </div>
+                          </div>
+                             <div class="col-md-6 mb-3">
+                              <div>
+                                  <label for="first_name">Informar Documento</label>
+                                  <input class="form-control" id="first_name" type="text" placeholder="" required>
+                              </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 mb-3">
+                              <div>
+                                  <label for="first_name">Quem solicitou vaga para o idoso:</label>
+                                  <input class="form-control" id="first_name" type="text" placeholder="" required>
+                              </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 mb-3">
+                                 <div>
+                                    <label for="first_name">Listar as respostas mais frequentes:</label>
+                                    <div>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Cônjuge</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Filho(a)</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Genro/nora  </label><br />
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Irmão(ã)</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Cunhado(a) </label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Sobrinho(a)</label><br />
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Neto(a)</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Não Parente</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Outros</label>
+                                 </div>
+                            </div>
+                          </div>
+                             <div class="col-md-6 mb-3">
+                              <div>
+                                  <label for="first_name">Outro, especificar</label>
+                                  <input class="form-control" id="first_name" type="text" placeholder="" required>
+                              </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 mb-3">
+                                 <div>
+                                    <label for="first_name">Motivo da Institucionalização: (múltipla escolha):</label>
+                                    <div>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Falta de cuidador </label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Por solicitação da família</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Sozinho por muito tempo </label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Doença</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Sem moradia</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Nenhum motivo</label><br />
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Opção própria</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Não sabe/Não lembra</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Outros Motivos</label>
+                                 </div>
+                            </div>
+                          </div>
+                             
                             <div class="mt-3">
                                 <button type="submit" class="btn btn-dark">Salvar</button>
                             </div>
