@@ -1,0 +1,935 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Primary Meta Tags -->
+<title>Cadastrar Novo Pacientes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="title" content="Volt Free Bootstrap Dashboard - Settings">
+<meta name="author" content="Themesberg">
+<meta name="description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+<meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, themesberg, themesberg dashboard, themesberg admin dashboard" />
+<link rel="canonical" href="https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard">
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="../assets/img/favicon/site.webmanifest">
+<link rel="mask-icon" href="../assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Fontawesome -->
+<link type="text/css" href="../vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+<!-- Sweet Alert -->
+<link type="text/css" href="../vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+
+<!-- Notyf -->
+<link type="text/css" href="../vendor/notyf/notyf.min.css" rel="stylesheet">
+
+<!-- Volt CSS -->
+<link type="text/css" href="../css/volt.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+<!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+
+</head>
+
+<body>
+
+        <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+
+
+        <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-md-none">
+    <a class="navbar-brand me-lg-5" href="../index.html">
+        <img class="navbar-brand-dark" src="../assets/img/brand/light.svg" alt="Volt logo" /> <img class="navbar-brand-light" src="../assets/img/brand/dark.svg" alt="Volt logo" />
+    </a>
+    <div class="d-flex align-items-center">
+        <button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
+        <nav id="sidebarMenu" class="sidebar d-md-block bg-dark text-white collapse" data-simplebar>
+  <div class="sidebar-inner px-4 pt-3">
+    <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
+      <div class="d-flex align-items-center">
+        <div class="user-avatar lg-avatar me-4">
+          <img src="../assets/img/team/profile-picture-3.jpg" class="card-img-top rounded-circle border-white"
+            alt="Bonnie Green">
+        </div>
+        <div class="d-block">
+          <h2 class="h6">Hi, Jane</h2>
+          <a href="../pages/examples/sign-in.html" class="btn btn-secondary text-dark btn-xs"><span
+              class="me-2"><span class="fas fa-sign-out-alt"></span></span>Sign Out</a>
+        </div>
+      </div>
+      <div class="collapse-close d-md-none">
+        <a href="#sidebarMenu" class="fas fa-times" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
+          aria-controls="sidebarMenu" aria-expanded="true" aria-label="Toggle navigation"></a>
+      </div>
+    </div>
+    <ul class="nav flex-column pt-3 pt-md-0">
+      <li class="nav-item">
+        <a href="../index.html" class="nav-link d-flex align-items-center">
+          <span class="sidebar-icon">
+            <img src="../assets/img/brand/light.svg" height="20" width="20" alt="Volt Logo">
+          </span>
+          <span class="mt-1 ms-1 sidebar-text">Lar das Velhinhas</span>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a href="../pages/dashboard/dashboard.html" class="nav-link">
+          <span class="sidebar-icon"><span class="fas fa-chart-pie"></span></span>
+          <span class="sidebar-text">Menu</span>
+        </a>
+      </li>
+
+
+
+    </ul>
+  </div>
+</nav>
+
+        <main class="content">
+
+            <nav class="navbar navbar-top navbar-expand navbar-dashboard navbar-dark ps-0 pe-2 pb-0">
+    <div class="container-fluid px-0">
+      <div class="d-flex justify-content-between w-100" id="navbarSupportedContent">
+        <div class="d-flex align-items-center">
+          <!-- Search form -->
+
+        </div>
+        <!-- Navbar links -->
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link text-dark me-lg-3 icon-notifications dropdown-toggle" data-unread-notifications="true" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="icon icon-sm">
+                <span class="fas fa-bell bell-shake"></span>
+                <span class="icon-badge rounded-circle unread-notifications"></span>
+              </span>
+            </a>
+            <div class="dropdown-menu dashboard-dropdown dropdown-menu-lg dropdown-menu-center mt-2 py-0">
+              <div class="list-group list-group-flush">
+                <a href="#" class="text-center text-primary fw-bold border-bottom border-light py-3">Notifications</a>
+                <a href="#" class="list-group-item list-group-item-action border-bottom border-light">
+                  <div class="row align-items-center">
+                      <div class="col-auto">
+                        <!-- Avatar -->
+                        <img alt="Image placeholder" src="../assets/img/team/profile-picture-1.jpg" class="user-avatar lg-avatar rounded-circle">
+                      </div>
+                      <div class="col ps-0 ms-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                              <h4 class="h6 mb-0 text-small">Jose Leos</h4>
+                            </div>
+                            <div class="text-end">
+                              <small class="text-danger">a few moments ago</small>
+                            </div>
+                        </div>
+                        <p class="font-small mt-1 mb-0">Added you to an event "Project stand-up" tomorrow at 12:30 AM.</p>
+                      </div>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action border-bottom border-light">
+                  <div class="row align-items-center">
+                      <div class="col-auto">
+                        <!-- Avatar -->
+                        <img alt="Image placeholder" src="../assets/img/team/profile-picture-2.jpg" class="user-avatar lg-avatar rounded-circle">
+                      </div>
+                      <div class="col ps-0 ms-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                              <h4 class="h6 mb-0 text-small">Neil Sims</h4>
+                            </div>
+                            <div class="text-end">
+                              <small class="text-danger">2 hrs ago</small>
+                            </div>
+                        </div>
+                        <p class="font-small mt-1 mb-0">You've been assigned a task for "Awesome new project".</p>
+                      </div>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action border-bottom border-light">
+                  <div class="row align-items-center">
+                      <div class="col-auto">
+                        <!-- Avatar -->
+                        <img alt="Image placeholder" src="../assets/img/team/profile-picture-3.jpg" class="user-avatar lg-avatar rounded-circle">
+                      </div>
+                      <div class="col ps-0 m-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                              <h4 class="h6 mb-0 text-small">Roberta Casas</h4>
+                            </div>
+                            <div class="text-end">
+                              <small>5 hrs ago</small>
+                            </div>
+                        </div>
+                        <p class="font-small mt-1 mb-0">Tagged you in a document called "First quarter financial plans",</p>
+                      </div>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action border-bottom border-light">
+                  <div class="row align-items-center">
+                      <div class="col-auto">
+                        <!-- Avatar -->
+                        <img alt="Image placeholder" src="../assets/img/team/profile-picture-4.jpg" class="user-avatar lg-avatar rounded-circle">
+                      </div>
+                      <div class="col ps-0 ms-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                              <h4 class="h6 mb-0 text-small">Joseph Garth</h4>
+                            </div>
+                            <div class="text-end">
+                              <small>1 d ago</small>
+                            </div>
+                        </div>
+                        <p class="font-small mt-1 mb-0">New message: "Hey, what's up? All set for the presentation?"</p>
+                      </div>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action border-bottom border-light">
+                  <div class="row align-items-center">
+                      <div class="col-auto">
+                        <!-- Avatar -->
+                        <img alt="Image placeholder" src="../assets/img/team/profile-picture-5.jpg" class="user-avatar lg-avatar rounded-circle">
+                      </div>
+                      <div class="col ps-0 ms-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                              <h4 class="h6 mb-0 text-small">Bonnie Green</h4>
+                            </div>
+                            <div class="text-end">
+                              <small>2 hrs ago</small>
+                            </div>
+                        </div>
+                        <p class="font-small mt-1 mb-0">New message: "We need to improve the UI/UX for the landing page."</p>
+                      </div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item text-center text-primary fw-bold rounded-bottom py-3">View all</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle pt-1 px-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="media d-flex align-items-center">
+                <img class="user-avatar md-avatar rounded-circle" alt="Image placeholder" src="../assets/img/team/profile-picture-3.jpg">
+                <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
+                  <span class="mb-0 font-small fw-bold">Enfermagem</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu dashboard-dropdown dropdown-menu-end mt-2 py-0">
+                <a class="dropdown-item rounded-top fw-bold" href="#"><span class="far fa-user-circle"></span>Perfil</a>
+                <a class="dropdown-item fw-bold" href="#"><span class="fas fa-cog"></span>Configurações</a>
+                <a class="dropdown-item fw-bold" href="#"><span class="fas fa-user-shield"></span>Suporte</a>
+                <div role="separator" class="dropdown-divider my-0"></div>
+                <a class="dropdown-item rounded-bottom fw-bold" href="#"><span class="fas fa-sign-out-alt text-danger"></span>Sair</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
+
+            </div>
+            <div class="row">
+                <div class="col-12 col-xl-8">
+                    <div class="card card-body shadow-sm mb-4">
+                        <h2 class="h5 mb-4">1.DADOS DE IDENTIFICAÇÃO DO IDOSO</h2>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <div>
+                                        <label for="first_name">Nome do idoso:</label>
+                                        <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-md-6 mb-3">
+                                    <label for="birthday">Data de Nascimento:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><span class="far fa-calendar-alt"></span></span>
+                                        <input data-datepicker="" class="form-control" id="birthday" type="text" placeholder="Dia/Mês/Ano" required>
+                                     </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="gender">Genero:</label>
+                                    <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                        <option selected>Genero</option>
+                                        <option value="1">Feminino</option>
+                                        <option value="2">Masculino</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6 mb-3">
+                                  <label for="gender">Vista de documento:</label>
+                                  <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                      <option selected></option>
+                                      <option value="1">Sim</option>
+                                      <option value="2">Não</option>
+                                  </select>
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                  <div>
+                                      <label for="first_name">Idade: "Sem documento (idade aparente)"</label>
+                                      <input class="form-control" id="first_name" type="number" placeholder="" required>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div>
+                                        <label for="first_name">Carteira de Identidade - RG:</label>
+                                        <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div>
+                                        <label for="first_name">CPF:</label>
+                                        <input class="form-control" id="first_name" type="text" onkeypress="$(this).mask('000.000.000-00')">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6 mb-3">
+                                  <div>
+                                      <label for="first_name">Tipo de Benefício:</label>
+                                      <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                          <option selected></option>
+                                          <option value="1">Aposentadoria</option>
+                                          <option value="2">Pensão</option>
+                                            <option value="2">Benefício de Prestação Continuada</option>
+                                      </select>
+                                  </div>
+                              </div>
+                                <div class="col-md-6 mb-3">
+                                    <div>
+                                        <label for="first_name">Município de nascimento:</label>
+                                        <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                    </div>
+                                </div>
+                            </div>
+                              <h2 class="h5 my-4">1.1 Último endereço do idoso(a):</h2>
+                            <div class="row">
+                                <div class="col-md-8 mb-3">
+                                    <div>
+                                        <label for="first_name">
+                                            Rua:
+                                        </label>
+                                        <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <div>
+                                        <label for="first_name">N°:
+                                        </label>
+                                        <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <div>
+                                        <label for="first_name">Comp.:
+                                        </label>
+                                        <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div>
+                                        <label for="first_name">
+                                            Bairro:
+                                        </label>
+                                        <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div>
+                                        <label for="first_name">Cidade:
+                                        </label>
+                                        <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                  <div>
+                                      <label for="first_name">CEP:
+                                      </label>
+                                      <input class="form-control" id="first_name" type="text" onkeypress="$(this).mask('00.000-000')">
+                                  </div>
+                              </div>
+                                <div class="col-md-4 mb-3">
+                                    <div>
+                                        <label for="first_name">Telefone:
+                                        </label>
+                                        <input class="form-control" id="first_name" type="text" onkeypress="$(this).mask('(00) 0000-00009')">
+                                    </div>
+                                </div>
+                            </div>
+                            <h2 class="h5 mb-4">2 DADOS DE IDENTIFICAÇÃO DO SEU RESPONSÁVEL</h2>
+
+                            <div class="row">
+                                <div class="col-sm-12 mb-3">
+                                    <div class="form-group">
+                                        <label for="address">2.1 Nome do Responsável:</label>
+                                        <input class="form-control" id="address" type="text" placeholder="" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 mb-3">
+                                    <div class="form-group">
+                                        <label for="city">2.2 Carteira de Identidade - RG:</label>
+                                        <input class="form-control" id="city" type="text" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="zip">2.3 CPF:</label>
+                                        <input class="form-control" id="first_name" type="text" onkeypress="$(this).mask('000.000.000-00')">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 mb-3">
+                                    <div>
+                                        <label for="first_name">
+                                            2.4 Rua:
+                                        </label>
+                                        <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <div>
+                                        <label for="first_name">2.5 N°:
+                                        </label>
+                                        <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <div>
+                                        <label for="first_name">2.6 Comp.:
+                                        </label>
+                                        <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div>
+                                        <label for="first_name">
+                                            2.7 Bairro:
+                                        </label>
+                                        <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div>
+                                        <label for="first_name">2.8 Cidade:
+                                        </label>
+                                        <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                  <div>
+                                      <label for="first_name">2.9 CEP:
+                                      </label>
+                                      <input class="form-control" id="first_name" type="text" onkeypress="$(this).mask('00.000-000')">
+                                  </div>
+                              </div>
+                                <div class="col-md-4 mb-3">
+                                    <div>
+                                        <label for="first_name">2.10 Telefone:
+                                        </label>
+                                        <input class="form-control" id="first_name" type="text" onkeypress="$(this).mask('(00) 0000-00009')">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                             <div class="col-md-6 mb-3">
+                                  <div>
+                                      <label for="first_name">2.11 Grau de parentesco com o idoso:</label>
+                                      <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                          <option selected></option>
+                                          <option value="1">Esposo (a)</option>
+                                          <option value="2">Filho (a)</option>
+                                            <option value="2">Genro/nora</option>
+                                              <option value="2">Sobrinho(a)</option>
+                                                <option value="2">Neto(a)</option>
+                                                  <option value="2">Parente</option>
+                                                    <option value="2">Vizinho(a)</option>
+                                                      <option value="2">Outro</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                  <div>
+                                      <label for="first_name">2.12 Outro:
+                                      </label>
+                                      <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                  </div>
+                              </div>
+                            </div>
+                              <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <div>
+                                        <label for="first_name">2.13 Anotação:
+                                        </label>
+                                      <textarea class="form-control" placeholder="" id="textarea" rows="4"></textarea>
+                                    </div>
+                                </div>
+                              </div>
+                              <h2 class="h5 mb-4">3.DADOS SOCIAIS RELATIVOS AO IDOSO</h2>
+
+                              <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div>
+                                        <label for="first_name">Quantos filhos o Sr (a) teve? Nº:
+                                        </label>
+                                  <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div>
+                                        <label for="first_name">Quantos filhos estão vivos? Nº:
+                                        </label>
+                                  <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6 mb-3">
+
+                                      <div>
+                                          <label for="first_name">Estado civil:</label>
+                                          <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                              <option selected></option>
+                                              <option value="1">Casado (a)</option>
+                                              <option value="2">Mora com companheiro (a)</option>
+                                                <option value="2">Separado (a) (s/ companheiro) </option>
+                                                  <option value="2">Divorciado(a) (s/ companheiro)</option>
+                                                    <option value="2">Viúvo (a) (s/ companheiro) </option>
+                                                      <option value="2">Nunca casou (solteiro (a), s/ companheiro (a)</option>
+                                                        <option value="2">Não sabe</option>
+
+                                          </select>
+                                      </div>
+
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div>
+                                        <label for="first_name">Escolaridade:</label>
+                                        <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                            <option selected></option>
+                                            <option value="1">Não alfabetizado (não sabe ler nem escrever mesmo que tenha estudado)</option>
+                                            <option value="2">Alfabetizado (mas não fez a 1ª série)</option>
+                                              <option value="2">Primário incompleto (1ª a 3ª série)</option>
+                                                <option value="2">Primário completo (4ª série)</option>
+                                                  <option value="2">Ginasial incompleto (5ª a 7ª série)</option>
+                                                    <option value="2">Ginasial completo (8ª série)</option>
+                                                      <option value="2">Secundário completo)</option>
+                                                        <option value="2">Secundário incompleto</option>
+                                                        <option value="2">Superior (completo ou não)</option>
+                                                        <option value="2">Não sabe</option>
+                                        </select>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6 mb-3">
+                                     <div>
+                                         <label for="first_name">Possui Referências Familiares:</label>
+                                         <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                             <option selected></option>
+                                             <option value="1">Não</option>
+                                             <option value="2">Sim, especificar</option>
+                                          </select>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-6 mb-3">
+                                     <div>
+                                         <label for="first_name">Especificar:
+                                         </label>
+                                         <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                     </div>
+                                 </div>
+                               </div>
+                              <div class="col-md-6 mb-3">
+                                <div>
+                                    <label for="first_name">Morava com quem anteriormente:</label>
+                                    <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                        <option selected></option>
+                                        <option value="1">Morava sozinho (a)</option>
+                                        <option value="2">Com cônjuge</option>
+                                          <option value="3">Com filho (a)</option>
+                                            <option value="4">Sobrinho (a)</option>
+                                              <option value="2">Neto (a)</option>
+                                                <option value="5">Com parentes</option>
+                                                  <option value="6">Não parentes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6 mb-3">
+                                   <div>
+                                       <label for="first_name">Fonte de Renda:</label>
+                                       <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                           <option selected></option>
+                                           <option value="1">Sem renda própria</option>
+                                           <option value="2">Aposentadoria</option>
+                                           <option value="3">Assalariado (a)</option>
+                                           <option value="4">Pensionista</option>
+                                           <option value="5">Benefício de Prestação Continuada</option>
+                                           <option value="6">Outro</option>
+                                        </select>
+                                   </div>
+                               </div>
+                               <div class="col-md-6 mb-3">
+                                   <div>
+                                       <label for="first_name">Outro, especificar:</label>
+                                       <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                   </div>
+                               </div>
+                             </div>
+                             <div class="row">
+                              <div class="col-md-6 mb-3">
+                                   <div>
+                                       <label for="first_name">última renda mensal em saláros mínimos (sm):</label>
+                                       <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                           <option selected></option>
+                                           <option value="1">Até 1 sm</option>
+                                           <option value="2">>1 até 2 sm</option>
+                                           <option value="3">De 3 a 5 sm</option>
+                                           <option value="4">De 6 a 10 sm</option>
+                                           <option value="5">Acima de 10 sm</option>
+                                        </select>
+                                   </div>
+                               </div>
+                               <div class="row">
+                                <div class="col-md-6 mb-3">
+                                     <div>
+                                         <label for="first_name">O idoso possui bens ?:</label>
+                                         <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                             <option selected></option>
+                                             <option value="1">Não</option>
+                                             <option value="2">Sim, espeificar</option>
+                                          </select>
+                                     </div>
+                                 </div>
+                                 <div class="col-md-6 mb-3">
+                                  <div>
+                                      <label for="first_name">Especificar:</label>
+                                      <input class="form-control" id="first_name" type="text" placeholder="" required>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6 mb-3">
+                                     <div>
+                                         <label for="first_name">Possui empréstimo consignado no seu Benefício?:</label>
+                                         <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                             <option selected></option>
+                                             <option value="1">Não</option>
+                                             <option value="2">Sim</option>
+                                          </select>
+                                     </div>
+                                 </div>
+                                 
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6 mb-3">
+                                   <div>
+                                       <label for="first_name">É o próprio idoso que recebe seu benefício previdenciário?:</label>
+                                       <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                           <option selected></option>
+                                           <option value="1">Sim</option>
+                                           <option value="2">Não, especificar quem recebe</option>
+                                        </select>
+                                   </div>
+                               </div>
+                               <div class="col-md-6 mb-3">
+                                <div>
+                                    <label for="first_name">Especificar quem recebe:</label>
+                                    <input class="form-control" id="first_name" type="text" placeholder="" required>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6 mb-3">
+                                   <div>
+                                       <label for="first_name">Essa pessoa especificada possui procuração outorgada pelo idoso para gerir seus interesses?</label>
+                                       <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                           <option selected></option>
+                                           <option value="1">Sim</option>
+                                           <option value="2">Não</option>
+                                        </select>
+                                   </div>
+                               </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 mb-3">
+                                 <div>
+                                    <label for="first_name">O idoso é interditado judicialmente?</label>
+                                    <select class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                         <option selected></option>
+                                         <option value="1">Não</option>
+                                         <option value="2">Sim (anexar cópia)</option>
+                                  </select>
+                            </div>
+                          </div>
+                             <div class="col-md-6 mb-3">
+                              <div>
+                                  <label for="first_name">Informar Documento</label>
+                                  <input class="form-control" id="first_name" type="text" placeholder="" required>
+                              </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 mb-3">
+                              <div>
+                                  <label for="first_name">Quem solicitou vaga para o idoso:</label>
+                                  <input class="form-control" id="first_name" type="text" placeholder="" required>
+                              </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 mb-3">
+                                 <div>
+                                    <label for="first_name">Listar as respostas mais frequentes:</label>
+                                    <div>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Cônjuge</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Filho(a)</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Genro/nora  </label><br />
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Irmão(ã)</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Cunhado(a) </label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Sobrinho(a)</label><br />
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Neto(a)</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Não Parente</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Outros</label>
+                                 </div>
+                            </div>
+                          </div>
+                             <div class="col-md-6 mb-3">
+                              <div>
+                                  <label for="first_name">Outro, especificar</label>
+                                  <input class="form-control" id="first_name" type="text" placeholder="" required>
+                              </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 mb-3">
+                                 <div>
+                                    <label for="first_name">Motivo da Institucionalização: (múltipla escolha):</label>
+                                    <div>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Falta de cuidador </label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Por solicitação da família</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Sozinho por muito tempo </label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Doença</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Sem moradia</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Nenhum motivo</label><br />
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Opção própria</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Não sabe/Não lembra</label>
+                                      <input id="checkid" type="checkbox" value="test" />
+                                      <label style="word-wrap:break-word">Outros Motivos</label>
+                                 </div>
+                            </div>
+                          </div>
+                             
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-dark">Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card card-body shadow-sm mb-4 mb-lg-0">
+                        <h2 class="h5 mb-4">Alerts & Notifications</h2>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex align-items-center justify-content-between px-0 border-bottom">
+                                <div>
+                                    <h3 class="h6 mb-1">Company News</h3>
+                                    <p class="small pe-4">Get Rocket news, announcements, and product updates</p>
+                                </div>
+                                <div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="user-notification-1">
+                                        <label class="form-check-label" for="user-notification-1"></label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center justify-content-between px-0 border-bottom">
+                                <div>
+                                    <h3 class="h6 mb-1">Account Activity</h3>
+                                    <p class="small pe-4">Get important notifications about you or activity you've missed</p>
+                                </div>
+                                <div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="user-notification-2" checked>
+                                        <label class="form-check-label" for="user-notification-2"></label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center justify-content-between px-0">
+                                <div>
+                                    <h3 class="h6 mb-1">Meetups Near You</h3>
+                                    <p class="small pe-4">Get an email when a Dribbble Meetup is posted close to my location</p>
+                                </div>
+                                <div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="user-notification-3" checked>
+                                        <label class="form-check-label" for="user-notification-3"></label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-4">
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <div class="card shadow-sm text-center p-0">
+                                <div class="profile-cover rounded-top" data-background="../assets/img/profile-cover.jpg"></div>
+                                <div class="card-body pb-5">
+                                    <img src="../assets/img/team/profile-picture-1.jpg" class="user-avatar large-avatar rounded-circle mx-auto mt-n7 mb-4" alt="Neil Portrait">
+                                    <h4 class="h3">Neil Sims</h4>
+                                    <h5 class="fw-normal">Senior Software Engineer</h5>
+                                    <p class="text-gray mb-4">New York, USA</p>
+                                    <a class="btn btn-sm btn-dark me-2" href="#"><span class="fas fa-user-plus me-1"></span> Connect</a>
+                                    <a class="btn btn-sm btn-secondary" href="#">Send Message</a>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card card-body shadow-sm mb-4">
+                                <h2 class="h5 mb-4">Select profile photo</h2>
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <!-- Avatar -->
+                                        <div class="user-avatar xl-avatar">
+                                            <img class="rounded" src="../assets/img/team/profile-picture-3.jpg" alt="change avatar">
+                                        </div>
+                                    </div>
+                                    <div class="file-field">
+                                        <div class="d-flex justify-content-xl-center ms-xl-3">
+                                           <div class="d-flex">
+                                              <span class="icon icon-md"><span class="fas fa-paperclip me-3"></span></span> <input type="file">
+                                              <div class="d-md-block text-left">
+                                                 <div class="fw-normal text-dark mb-1">Choose Image</div>
+                                                 <div class="text-gray small">JPG, GIF or PNG. Max size of 800K</div>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-12">
+                            <div class="card card-body shadow-sm mb-4">
+                                <h2 class="h5 mb-4">Select cover photo</h2>
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <!-- Avatar -->
+                                        <div class="user-avatar xl-avatar">
+                                            <img class="rounded" src="../assets/img/profile-cover.jpg" alt="change cover photo">
+                                        </div>
+                                    </div>
+                                    <div class="file-field">
+                                        <div class="d-flex justify-content-xl-center ms-xl-3">
+                                           <div class="d-flex">
+                                              <span class="icon icon-md"><span class="fas fa-paperclip me-3"></span></span> <input type="file">
+                                              <div class="d-md-block text-left">
+                                                 <div class="fw-normal text-dark mb-1">Choose Image</div>
+                                                 <div class="text-gray small">JPG, GIF or PNG. Max size of 800K</div>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+<footer class="footer section py-5">
+    <div class="row">
+        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+            <p class="mb-0 text-center text-xl-left">Copyright © 2021-<span class="current-year"></span> <a
+                    class="text-primary fw-normal" href="https://themesberg.com" target="_blank">Flavio e Jonnatha</a></p>
+        </div>
+
+
+    </div>
+</footer>
+        </main>
+
+    <!-- Core -->
+<script src="../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
+<script src="../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- Vendor JS -->
+<script src="../vendor/onscreen/dist/on-screen.umd.min.js"></script>
+
+<!-- Slider -->
+<script src="../vendor/nouislider/distribute/nouislider.min.js"></script>
+
+<!-- Smooth scroll -->
+<script src="../vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+<!-- Charts -->
+<script src="../vendor/chartist/dist/chartist.min.js"></script>
+<script src="../vendor/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+
+<!-- Datepicker -->
+<script src="../vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+
+<!-- Sweet Alerts 2 -->
+<script src="../vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
+
+<!-- Moment JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+
+<!-- Vanilla JS Datepicker -->
+<script src="../vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+
+<!-- Notyf -->
+<script src="../vendor/notyf/notyf.min.js"></script>
+
+<!-- Simplebar -->
+<script src="../vendor/simplebar/dist/simplebar.min.js"></script>
+
+<!-- Github buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- Volt JS -->
+<script src="../assets/js/volt.js"></script>
+
+
+</body>
+
+</html>
