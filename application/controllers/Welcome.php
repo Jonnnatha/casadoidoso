@@ -39,6 +39,12 @@ class Welcome extends CI_Controller {
 			$this->load->view('dashboard/nutri/cad_nutri');
 			$this->load->view('templates/footermenu');
 	}
+	public function cadfisio()
+	{
+			$this->load->view('templates/headermenu');
+			$this->load->view('dashboard/nutri/cad_nutri');
+			$this->load->view('templates/footermenu');
+	}
 	public function cadidoso()
 	{
 $this->load->model("Produtos");
