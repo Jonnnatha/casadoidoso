@@ -42,7 +42,7 @@ class Welcome extends CI_Controller {
 	public function cadfisio()
 	{
 			$this->load->view('templates/headermenu');
-			$this->load->view('dashboard/nutri/cad_nutri');
+			$this->load->view('dashboard/fisiotera/cad_fisio');
 			$this->load->view('templates/footermenu');
 	}
 	public function cadidoso()

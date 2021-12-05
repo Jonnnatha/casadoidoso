@@ -58,3 +58,4 @@ $route['menu'] = 'Welcome/menu';
 $route['novopaciente'] = 'Welcome/novopaciente';
 $route['cadidoso'] = 'Welcome/cadidoso';
 $route['cadnutri'] = 'Welcome/cadnutri';
+$route['cadfisio'] = 'Welcome/cadfisio';
